@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Instagram - Slwkhairn</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <style>
+      .highlight-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        object-fit: cover;
+        padding: 3px;
+      }
+      /* Atur ukuran gambar feed agar mirip Instagram */
+      .post-img {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* semua jadi kotak */
+        object-fit: cover; /* isi penuh tanpa ketarik */
+        border-radius: 5px; /* sedikit rounded biar estetik */
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Header / Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Instagram</a>
+        <button class="btn btn-outline-primary btn-sm ms-auto">Log Out</button>
+      </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <div class="container my-4">
+      <div class="row align-items-center">
+        <!-- Foto Profil -->
+        <div class="col-4 col-md-3 col-lg-2 text-center">
+          <img
+            src="profil.jpg"
+            class="rounded-circle img-fluid border"
+            alt="Foto Profil"
+          />
+        </div>
+
+        <!-- Info Profil -->
+        <div class="col-8 col-md-9 col-lg-10">
+          <div class="d-flex flex-wrap align-items-center mb-2">
+            <h2 class="me-3">razor_bii</h2>
+            <button class="btn btn-sm btn-outline-dark me-2">
+              Edit Profile
+            </button>
+            <button class="btn btn-sm btn-primary">Follow</button>
+          </div>
+          <p>
+            <strong>12</strong> Postingan • <strong>789k</strong> Pengikut •
+            <strong>890k</strong> Mengikuti
+          </p>
+          <p class="text-muted">OFFKORSS</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sorotan (Highlights) -->
+    <div class="container mb-4">
+      <div
+        class="row text-center justify-content-start flex-nowrap overflow-auto"
+      >
+        <div class="col-3 col-sm-2">
+          <img src="sorotan1.png" class="highlight-circle" alt="Highlight1" />
+          <p class="small mt-1">🌻</p>
+        </div>
+        <div class="col-3 col-sm-2">
+          <img src="sorotan2.png" class="highlight-circle" alt="Highlight2" />
+          <p class="small mt-1">🌼</p>
+        </div>
+        <div class="col-3 col-sm-2">
+          <img src="sorotan3.png" class="highlight-circle" alt="Highlight3" />
+          <p class="small mt-1">🌸</p>
+        </div>
+        <div class="col-3 col-sm-2">
+          <img src="sorotan4.png" class="highlight-circle" alt="Highlight4" />
+          <p class="small mt-1">🌞</p>
+        </div>
+        <div class="col-3 col-sm-2">
+          <img src="sorotan5.png" class="highlight-circle" alt="Highlight5" />
+          <p class="small mt-1">🐾</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feed Foto -->
+    <div class="container">
+      <div class="row g-2">
+        <!-- 12 foto minimal -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="profil.jpg" class="post-img" alt="post1" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto2.png" class="post-img" alt="post2" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto3.png" class="post-img" alt="post3" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto4.png" class="post-img" alt="post4" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto5.png" class="post-img" alt="post5" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto6.png" class="post-img" alt="post6" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto7.png" class="post-img" alt="post7" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto8.png" class="post-img" alt="post8" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto9.png" class="post-img" alt="post9" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto10.png" class="post-img" alt="post10" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto11.png" class="post-img" alt="post11" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <img src="foto12.png" class="post-img" alt="post12" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top mt-4 py-3 text-center">
+      <small class="text-muted">&copy; 2025 Instagram Clone by razor_bii</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
