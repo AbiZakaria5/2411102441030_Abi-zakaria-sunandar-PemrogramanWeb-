@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Instagram</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black min-h-screen">
+
+  <!-- HEADER PROFIL -->
+  <header class="max-w-4xl mx-auto p-4 flex items-center gap-4">
+    <img src="profil.jpg" alt="Profile" class="w-28 h-28 rounded-full object-cover border">
+    <div>
+      <div class="flex items-center gap-2">
+        <h2 class="text-xl font-semibold">razor_bii</h2>
+        <button class="px-3 py-1 text-sm border rounded">Edit profile</button>
+      </div>
+      <div class="flex gap-6 mt-3 text-sm">
+        <span><b>0</b> posts</span>
+        <span><b>101</b> followers</span>
+        <span><b>126</b> following</span>
+      </div>
+      <div class="mt-2 text-sm">
+        <p class="font-bold">Bii Los Kenndy</p>
+        <p>bdbdhd</p>
+      </div>
+    </div>
+  </header>
+
+
+  <hr class="border-gray-300 my-4">
+
+  <!-- TAB NAVIGASI -->
+  <div class="max-w-4xl mx-auto flex justify-center gap-12 text-gray-500 text-sm font-medium border-t border-gray-300">
+    <button class="flex items-center gap-1 border-t-2 border-black px-4 py-2 text-black">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      POSTS
+    </button>
+    <button class="flex items-center gap-1 px-4 py-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m0-4v4m0-4L9 6m6 4L9 18" />
+      </svg>
+      REELS
+    </button>
+    <button class="flex items-center gap-1 px-4 py-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+      TAGGED
+    </button>
+  </div>
+
+  <!-- GRID FOTO -->
+  <main class="max-w-4xl mx-auto">
+    <div class="grid grid-cols-3 gap-px bg-gray-300">
+      <img src="foto2.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto3.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto4.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto5.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto6.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto7.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto8.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto9.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto10.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto11.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto12.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+      <img src="foto13.png" alt="Post" class="w-full aspect-square object-cover bg-white cursor-pointer"
+        onclick="openModal(this)">
+    </div>
+  </main>
+
+  <!-- MODAL PREVIEW GAMBAR -->
+  <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modalImg" class="max-h-[90%] max-w-[90%] object-contain rounded-lg border-2 border-white">
+  </div>
+
+  <script>
+    function openModal(img) {
+      document.getElementById("imgModal").classList.remove("hidden");
+      document.getElementById("imgModal").classList.add("flex");
+      document.getElementById("modalImg").src = img.src;
+    }
+    function closeModal() {
+      document.getElementById("imgModal").classList.add("hidden");
+      document.getElementById("imgModal").classList.remove("flex");
+    }
+  </script>
+
+</body>
+
+</html>
