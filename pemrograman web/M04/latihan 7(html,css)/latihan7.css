@@ -1,0 +1,94 @@
+/* ---- Style Body dan Wrapper ---- */
+body {
+    background: #7FFFD4;
+    margin: 0;
+    padding: 20px;
+}
+
+#wrapper {
+    width: 600px;
+    margin: auto;
+}
+
+/* ---- Style Menu Utama ---- */
+#menu ul {
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*membuat menu menjadi horizontal dengan display block*/
+#menu ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+/*Untuk menyembunyikan ul li (submenu)*/
+#menu li ul {
+    display: none;
+}
+
+/*style awal sebelum cursor diarahkan (menu utama)*/
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #008000;
+    white-space: nowrap;
+}
+
+/*style setelah cursor diarahkan (menu utama)*/
+#menu ul li a:hover {
+    background: #666;
+}
+
+/*untuk memunculkan submenu*/
+#menu li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+/*meratakan sub menu dan mengembalikan float ke default*/
+#menu li:hover li {
+    float: none;
+    font-size: 11px;
+}
+
+/*style awal submenu*/
+#menu li:hover a {
+    background: #3b3b3b;
+}
+
+/*style setelah cursor diarahkan submenu*/
+#menu li:hover li a:hover {
+    background: #666;
+}
+
+/* ---- FOTO ABOUT ME ---- */
+.foto-profil {
+    display: block;
+    width: 100px;          /* ukuran foto agar tidak membesar */
+    height: 100px;         /* ukuran foto agar tidak membesar */
+    object-fit: cover;     /* menjaga proporsi foto */
+    margin: 10px auto;     /* foto berada di tengah */
+    border-radius: 50%;    /* membuat foto lingkaran */
+    border: 2px solid #fff;
+}
+
+/* mencegah efek hover memperbesar foto */
+.about-me li img:hover {
+    transform: none;
+    scale: 1;
+}
+
+/* Style teks biodata */
+.about-me li a {
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+}
