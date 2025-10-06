@@ -1,0 +1,24 @@
+body {
+    background: url(foto/foto1.png) no-repeat;
+    font-family:Georgia;
+    background-size: cover;
+}
+
+h1 {
+
+    background-color: purple;
+    text-align: center;
+    color:white;
+}
+
+h2{
+    color: red;
+    font-size: 25px;
+}
+
+p{
+
+    margin-left: 50px;
+    color: rgb(255, 251, 0);
+    font-size: 24px;
+}
