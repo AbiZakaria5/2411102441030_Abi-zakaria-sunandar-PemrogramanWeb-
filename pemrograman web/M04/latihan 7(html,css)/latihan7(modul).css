@@ -1,0 +1,64 @@
+#wrapper {
+    width:600px; margin:auto;
+}
+
+/*style awal menu dan untuk menghilangkan list style*/
+#menu ul {
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*membuat menu menjadi horizontal dengan display block*/
+#menu ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+/*Untuk menyembunyikan ul li (submenu)*/
+#menu li ul {
+    display: none;
+}
+
+/*style awal seblum cursor mouse di arahkan (menu utama)*/
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    background: #000;
+    /*margin-left: 1px;*/
+    white-space: nowrap;
+}
+
+/*style setelah cursor diarahkan*/
+#menu ul li a:hover {
+    background: #666;
+}
+
+/*untuk memunculkan submenu jika pada sebuah menu utama ada tag il ul
+(maksudnya ada tag ul ada dalam tag li)*/
+#menu li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+/*meratakan sub menu kanan kiri dan menghilangkan fungsi float left
+(mengembalikan ke default)*/
+#menu li:hover li {
+    float: none;
+    font-size: 11px;
+}
+
+/*style awal seblum cursor mouse di arahkan (submenu)*/
+#menu li:hover a {
+    background: #3b3b3b;
+}
+
+/*style setelah cursor diarahkan (submenu)*/
+#menu li:hover li a:hover {
+    background: #666;
+}
