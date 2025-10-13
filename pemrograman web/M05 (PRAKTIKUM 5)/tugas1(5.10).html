@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Seleksi Nilai</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h2 {
+        color: #333;
+      }
+      table {
+        border-collapse: collapse;
+        width: 400px;
+        text-align: center;
+        font-size: 16px;
+      }
+      th,
+      td {
+        border: 1px solid #c0c0c0;
+        padding: 8px;
+      }
+      th {
+        background-color: #8bc34a; /* hijau header */
+        color: white;
+      }
+      /* Warna selang-seling baris */
+      tr:nth-child(even) {
+        background-color: #f9fff0; /* hijau muda */
+      }
+      tr:nth-child(odd) {
+        background-color: #ffffff; /* putih */
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Array untuk menampung data nilai
+      var data = [];
+
+      // Fungsi untuk menentukan huruf dan keterangan
+      function konversiNilai(nilai) {
+        var huruf = "";
+        var ket = "";
+
+        if (nilai >= 80 && nilai <= 100) {
+          huruf = "A";
+          ket = "Lulus";
+        } else if (nilai >= 75 && nilai <= 79) {
+          huruf = "AB";
+          ket = "Lulus";
+        } else if (nilai >= 70 && nilai <= 74) {
+          huruf = "B";
+          ket = "Lulus";
+        } else if (nilai >= 65 && nilai <= 69) {
+          huruf = "BC";
+          ket = "Lulus";
+        } else if (nilai >= 60 && nilai <= 64) {
+          huruf = "C";
+          ket = "Lulus";
+        } else if (nilai >= 50 && nilai <= 59) {
+          huruf = "D";
+          ket = "Tidak Lulus";
+        } else if (nilai >= 0 && nilai <= 49) {
+          huruf = "E";
+          ket = "Tidak Lulus";
+        } else {
+          huruf = "-";
+          ket = "Nilai tidak valid";
+        }
+
+        return { huruf: huruf, ket: ket };
+      }
+
+      // Meminta input untuk 5 siswa
+      for (var i = 1; i <= 7; i++) {
+        var nilai = prompt("Masukkan nilai ke-" + i + " (0-100): ", 0);
+        nilai = parseInt(nilai);
+        var hasil = konversiNilai(nilai);
+        data.push({
+          nomor: i,
+          nilai: nilai,
+          huruf: hasil.huruf,
+          ket: hasil.ket,
+        });
+      }
+
+      // Menampilkan tabel
+      document.write("<h2>Daftar Nilai Mahasiswa</h2>");
+      document.write("<table>");
+      document.write(
+        "<tr><th>No</th><th>Nilai</th><th>Huruf</th><th>Keterangan</th></tr>"
+      );
+
+      for (var j = 0; j < data.length; j++) {
+        document.write("<tr>");
+        document.write("<td>" + data[j].nomor + "</td>");
+        document.write("<td>" + data[j].nilai + "</td>");
+        document.write("<td>" + data[j].huruf + "</td>");
+        document.write("<td>" + data[j].ket + "</td>");
+        document.write("</tr>");
+      }
+
+      document.write("</table>");
+    </script>
+  </body>
+</html>
