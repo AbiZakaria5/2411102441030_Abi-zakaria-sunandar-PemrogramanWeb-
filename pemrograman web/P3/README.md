@@ -40,3 +40,72 @@ Dengan utility ini, kamu bisa mengatur arah layout, ukuran teks, padding, jarak,
 
 <!-- Grid responsif -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">...</div>
+
+
+
+
+
+
+
+
+
+
+
+## ⚖️ 3. Jelaskan trade-off antara memakai banyak utility classes vs membuat component CSS tersendiri.
+
+Dalam pengembangan dengan **Tailwind CSS**, ada dua pendekatan umum untuk mengatur gaya elemen:  
+(1) memakai banyak utility classes langsung di HTML, atau  
+(2) membuat component CSS tersendiri.  
+Keduanya memiliki kelebihan dan kekurangan masing-masing.
+
+---
+
+### 🔹 A. Menggunakan Banyak Utility Classes
+
+**Kelebihan:**
+- ⚡ Proses lebih cepat dan fleksibel dalam membuat layout.  
+- 🎯 Tidak perlu menulis CSS tambahan, cukup dengan kelas bawaan Tailwind.  
+- ✅ Gaya antar elemen tetap konsisten karena dikontrol oleh sistem utility.  
+
+**Kekurangan:**
+- 😅 HTML bisa menjadi panjang dan sulit dibaca (*class hell*).  
+- 🧩 Sulit dikelola pada proyek besar dengan banyak komponen kompleks.  
+
+---
+
+### 🔸 B. Membuat Component CSS Tersendiri
+
+**Kelebihan:**
+- 🧱 Kode HTML lebih bersih dan mudah dibaca.  
+- 🔁 Efisien jika pola gaya digunakan berulang kali.  
+- 🧩 Memudahkan pemeliharaan karena perubahan gaya cukup di satu tempat.  
+
+**Kekurangan:**
+- 🕐 Membutuhkan waktu tambahan untuk pembuatan dan pengelolaan.  
+- ⚠️ Sedikit mengurangi fleksibilitas “utility-first” yang menjadi konsep utama Tailwind.  
+
+---
+
+### 📊 Perbandingan Singkat
+
+| Aspek | Utility Classes | Component CSS |
+|--------|------------------|----------------|
+| Kecepatan Pengembangan | ⚡ Cepat | 🕐 Lebih lambat |
+| Kerapihan Kode HTML | 😅 Kadang berantakan | ✅ Lebih bersih |
+| Reusability (Dapat digunakan ulang) | ⚠️ Terbatas | ✅ Tinggi |
+| Konsistensi Style | ✅ Konsisten | ⚠️ Bisa berbeda antar file |
+| Pemeliharaan | ⚠️ Agak sulit untuk proyek besar | ✅ Lebih mudah |
+
+---
+
+### 🧠 Kesimpulan
+
+Gunakan **utility classes** untuk pengembangan cepat dan fleksibel, terutama pada tahap prototyping.  
+Namun, jika ada pola gaya yang **sering digunakan berulang kali**, buatlah **component CSS tersendiri** agar kode lebih efisien, bersih, dan mudah dikelola.
+
+---
+
+📄 **Referensi:**
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Best Practices for Utility-First CSS](https://tailwindcss.com/docs/utility-first)
+
