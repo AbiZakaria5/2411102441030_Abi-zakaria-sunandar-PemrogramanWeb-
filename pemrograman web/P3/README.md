@@ -95,9 +95,6 @@ Namun, jika ada pola gaya yang **sering digunakan berulang kali**, buatlah **com
 
 ---
 
-📄 **Referensi:**
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Best Practices for Utility-First CSS](https://tailwindcss.com/docs/utility-first)
 
 
 
