@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Data Mahasiswa</title>
+  <link rel="stylesheet" href="uts.css">
+</head>
+<body>
+  <div class="kolom">
+    <h1>Input Data</h1>
+
+    <p>Nama Lengkap:</p>
+    <input type="text" id="nama-mahasiswa" placeholder="Masukkan nama">
+
+    <p>NIM:</p>
+    <input type="text" id="nim" placeholder="20210001">
+
+    <p>Semester:</p>
+    <input type="text" id="semester" placeholder="1 - 8">
+
+    <p>Program Studi:</p>
+    <select id="prodi">
+      <option value="">-- Pilih --</option>
+      <option value="TI">Teknik Informatika</option>
+      <option value="Hukum">Teknik Hukum</option>
+      <option value="Sipil">Teknik Sipil</option>
+    </select>
+
+    <p>Email:</p>
+    <input type="text" id="email" placeholder="email@example">
+
+    <br><br>
+    <button id="tombol">Kirim Data</button>
+  </div>
+  <div class="kolom">
+    <h1>Informasi Pengiriman</h1>
+      <p>Apa yang terjadi saat anda klik "Kirim Data"?</p>
+    <ul>
+      <p>✅Data ditampilkan di console</p>
+      <p>✅Data disimpan di array</p>
+      <p>✅Jumlah data diupdate</li>
+      <p>✅Form akan kosong kembali</p>
+    </ul>
+  </div>
+  <div class="kolom">
+    <h1>Tabel Mahasiswa</h1>
+    <table border="1" id="tabel-mahasiswa">
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Info</th>
+      </tr>
+    </table>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
